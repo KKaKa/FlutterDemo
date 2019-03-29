@@ -4,7 +4,7 @@ import 'package:english_words/english_words.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/first/RandowWords.dart';
-import 'package:flutter_app/second/second_page.dart';
+import 'package:flutter_app/second/SecondPage.dart';
 
 class RandowWordsState extends State<RandowWords>{
   final _suggestions = <WordPair>[];

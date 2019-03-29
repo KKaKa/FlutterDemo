@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app/third/NotMaterialPage.dart';
+import 'package:toast/toast.dart';
 
 class SecondPage extends StatelessWidget{
   @override
@@ -48,14 +50,14 @@ class SecondPage extends StatelessWidget{
       ),
     );
 
-    Column buildBottonColumn(IconData icon,String label){
+    Column buildBottonColumn(Icon icon,String label,VoidCallback onPressed){
       Color color = Theme.of(context).primaryColor;
 
       return new Column(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          new Icon(icon,color: color),
+          new IconButton(color: color,onPressed: onPressed, icon: icon),
           new Container(
             margin: const EdgeInsets.only(top: 8.0),
             child: new Text(
@@ -71,13 +73,27 @@ class SecondPage extends StatelessWidget{
       );
     }
 
+    void _onCall(){
+      Navigator.push(context, new MaterialPageRoute(builder: (BuildContext context){
+        return new NotMaterialPage();
+      }));
+    }
+
+    void _onNearMe(){
+      Toast.show('onNearMe', context,duration: Toast.LENGTH_LONG,gravity: Toast.BOTTOM);
+    }
+
+    void _onShare(){
+      Toast.show('onShare', context,duration: Toast.LENGTH_LONG,gravity: Toast.BOTTOM);
+    }
+
     Widget buttonSection = new Container(
       child: new Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-          buildBottonColumn(Icons.call, 'CALL'),
-          buildBottonColumn(Icons.near_me, 'ROUTE'),
-          buildBottonColumn(Icons.share, 'SHARE')
+          buildBottonColumn(new Icon(Icons.call,color: Colors.blue), 'CALL',_onCall),
+          buildBottonColumn(new Icon(Icons.near_me,color: Colors.blue), 'ROUTE',_onNearMe),
+          buildBottonColumn(new Icon(Icons.share,color: Colors.blue), 'SHARE',_onShare)
         ],
       ),
     );
