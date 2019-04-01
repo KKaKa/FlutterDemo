@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_app/first/RandowWords.dart';
+import 'package:flutter_app/fourth/ExpandedPage.dart';
 import 'package:flutter_app/index/IndexPage.dart';
 import 'package:flutter_app/second/SecondPage.dart';
 import 'package:flutter_app/third/NotMaterialPage.dart';
@@ -14,7 +15,8 @@ class IndexState extends State<IndexPage>{
     'First',
     'Second',
     'NotMaterialPage',
-    'RowAndColumn'
+    'RowAndColumn',
+    'Expanded'
   ];
 
   @override
@@ -47,6 +49,11 @@ class IndexState extends State<IndexPage>{
 
       case 3:
         _onRoute(new RowPage());
+        break;
+
+      case 4:
+        _onRoute(new ExpandedPage());
+        break;
     }
   }
 

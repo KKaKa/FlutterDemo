@@ -10,7 +10,7 @@ class RowPage extends StatelessWidget{
   Widget build(BuildContext context) {
     this._context = context;
     return new MaterialApp(
-      title:'RowAndColumn',
+      title:'Row',
       home: new Scaffold(
         appBar: new AppBar(
           title: new Text('RowAndColumn'),
