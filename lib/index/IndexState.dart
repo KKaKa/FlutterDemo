@@ -2,8 +2,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_app/fifth/ColorViewPage.dart';
+import 'package:flutter_app/fifth/ListViewPage.dart';
+import 'package:flutter_app/fifth/StackPage.dart';
 import 'package:flutter_app/first/RandowWords.dart';
+import 'package:flutter_app/fourth/CardPage.dart';
 import 'package:flutter_app/fourth/ExpandedPage.dart';
+import 'package:flutter_app/fourth/GridView.dart';
 import 'package:flutter_app/index/IndexPage.dart';
 import 'package:flutter_app/second/SecondPage.dart';
 import 'package:flutter_app/third/NotMaterialPage.dart';
@@ -16,7 +21,12 @@ class IndexState extends State<IndexPage>{
     'Second',
     'NotMaterialPage',
     'RowAndColumn',
-    'Expanded'
+    'Expanded',
+    'CardPage',
+    'GridView',
+    'ListView',
+    'ColorView',
+    'Stack'
   ];
 
   @override
@@ -53,6 +63,26 @@ class IndexState extends State<IndexPage>{
 
       case 4:
         _onRoute(new ExpandedPage());
+        break;
+
+      case 5:
+        _onRoute(new CardPage());
+        break;
+
+      case 6:
+        _onRoute(new GridViewPage());
+        break;
+
+      case 7:
+        _onRoute(new ListViewPage());
+        break;
+
+      case 8:
+        _onRoute(new ColorViewPage());
+        break;
+
+      case 9:
+        _onRoute(new StackPage());
         break;
     }
   }

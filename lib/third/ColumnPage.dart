@@ -5,24 +5,21 @@ import 'package:flutter/material.dart';
 class ColumnPage extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      title: 'Column',
-      home: new Scaffold(
-        appBar: new AppBar(
-          title: new Text('ColumnPage'),
-        ),
-        body: new ListView(
-          padding: const EdgeInsets.all(10.0),
-          scrollDirection: Axis.horizontal,
-          children: <Widget>[
-            _buildColumnStart(),
-            _buildColumnEnd(),
-            _buildColumnCenter(),
-            _buildColumnSpaceBetween(),
-            _buildColumnSpaceAround(),
-            _buildColumnSpaceEvenly()
-          ],
-        ),
+    return new Scaffold(
+      appBar: new AppBar(
+        title: new Text('ColumnPage'),
+      ),
+      body: new ListView(
+        padding: const EdgeInsets.all(10.0),
+        scrollDirection: Axis.horizontal,
+        children: <Widget>[
+          _buildColumnStart(),
+          _buildColumnEnd(),
+          _buildColumnCenter(),
+          _buildColumnSpaceBetween(),
+          _buildColumnSpaceAround(),
+          _buildColumnSpaceEvenly()
+        ],
       ),
     );
   }

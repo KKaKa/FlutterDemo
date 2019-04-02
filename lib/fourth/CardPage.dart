@@ -97,28 +97,15 @@ class CardPage extends StatelessWidget{
       ),
     );
 
-    return new MaterialApp(
-      title: 'CardPage',
-      home: new Scaffold(
-        appBar: new AppBar(
-          title: new Text('CardPage'),
-          leading: Builder(builder: (BuildContext buildContext){
-            return new IconButton(icon: const Icon(Icons.arrow_back), onPressed: (){Navigator.pop(context);});
-          }),
-          actions: <Widget>[
-            new IconButton(icon: new Icon(Icons.arrow_forward), onPressed: (){
-              Navigator.push(context, new MaterialPageRoute(builder: (BuildContext buildContext){
-                return new GridViewPage();
-              }));
-            })
-          ],
-        ),
-        body: Container(
-          margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
-          child: Card(
-            child: new SingleChildScrollView(
-              child: leftColumn,
-            ),
+    return new Scaffold(
+      appBar: new AppBar(
+        title: new Text('CardPage'),
+      ),
+      body: Container(
+        margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
+        child: Card(
+          child: new SingleChildScrollView(
+            child: leftColumn,
           ),
         ),
       ),

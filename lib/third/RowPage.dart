@@ -9,31 +9,25 @@ class RowPage extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     this._context = context;
-    return new MaterialApp(
-      title:'Row',
-      home: new Scaffold(
-        appBar: new AppBar(
-          title: new Text('RowAndColumn'),
-          actions: <Widget>[
-            new IconButton(icon: new Icon(Icons.chevron_right), onPressed: _onNext)
+    return new Scaffold(
+      appBar: new AppBar(
+        title: new Text('Row'),
+        actions: <Widget>[
+          new IconButton(icon: new Icon(Icons.chevron_right), onPressed: _onNext)
+        ],
+      ),
+      body: new Container(
+        padding: const EdgeInsets.all(10.0),
+        child: new ListView(
+          children: <Widget>[
+            _buildRowSpaceEvenly(),
+            _buildRowSpaceAround(),
+            _buildRowSpaceBetween(),
+            _buildRowCenter(),
+            _buildRowStart(),
+            _buildRowEnd(),
           ],
         ),
-        body: new Container(
-          padding: const EdgeInsets.all(10.0),
-          child: new ListView(
-            children: <Widget>[
-              _buildRowSpaceEvenly(),
-              _buildRowSpaceAround(),
-              _buildRowSpaceBetween(),
-              _buildRowCenter(),
-              _buildRowStart(),
-              _buildRowEnd(),
-            ],
-          ),
-        ),
-      ),
-      theme: new ThemeData(
-        primarySwatch: Colors.blue
       ),
     );
   }

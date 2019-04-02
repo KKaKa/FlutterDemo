@@ -9,7 +9,6 @@ class GridViewState extends State<GridViewPage>{
     return new Scaffold(
       appBar: new AppBar(
         title: new Text('GridViewPage'),
-        leading: new IconButton(icon: new Icon(Icons.arrow_back), onPressed: (){Navigator.pop(context);}),
       ),
       body: _buildGridView(),
     );
