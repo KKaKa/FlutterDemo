@@ -23,7 +23,7 @@ Widget _buildStack() => Stack(
     ),
     Container(
       decoration: BoxDecoration(
-        color: Colors.a,
+        color: Colors.black45,
       ),
       child: Text(
         'Mike',

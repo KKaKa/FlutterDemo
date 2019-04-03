@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app/sixth/FavouriteWidget.dart';
 import 'package:flutter_app/third/NotMaterialPage.dart';
 import 'package:toast/toast.dart';
 
@@ -41,11 +42,7 @@ class SecondPage extends StatelessWidget{
               ],
             ),
           ),
-          new Icon(
-            Icons.star,
-            color: Colors.red,
-          ),
-          new Text('41')
+          FavouriteWidget()
         ],
       ),
     );
