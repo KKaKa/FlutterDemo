@@ -116,7 +116,6 @@ class PaletteTabView extends StatelessWidget {
 }
 
 class ColorViewPage extends StatelessWidget {
-  static const String routeName = '/colors';
 
   @override
   Widget build(BuildContext context) {

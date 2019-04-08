@@ -11,9 +11,12 @@ import 'package:flutter_app/fourth/ExpandedPage.dart';
 import 'package:flutter_app/fourth/GridView.dart';
 import 'package:flutter_app/index/IndexPage.dart';
 import 'package:flutter_app/second/SecondPage.dart';
+import 'package:flutter_app/seventh/FadePage.dart';
+import 'package:flutter_app/seventh/ShoppingList.dart';
 import 'package:flutter_app/sixth/ContactPage.dart';
 import 'package:flutter_app/sixth/StateByParentPage.dart';
 import 'package:flutter_app/sixth/StateBySelfPage.dart';
+import 'package:flutter_app/sixth/StateTogetherPage.dart';
 import 'package:flutter_app/third/NotMaterialPage.dart';
 import 'package:flutter_app/third/RowPage.dart';
 import 'package:toast/toast.dart';
@@ -33,6 +36,9 @@ class IndexState extends State<IndexPage>{
     'Contact',
     'widget管理自己的状态',
     'widget父类管理状态',
+    '共同管理状态',
+    '购物车',
+    'Fade',
   ];
 
   @override
@@ -101,6 +107,18 @@ class IndexState extends State<IndexPage>{
 
       case 12:
         _onRoute(new StateByPatentPage());
+        break;
+
+      case 13:
+        _onRoute(new StateTogetherWidgetPage());
+        break;
+
+      case 14:
+        _onRoute(new ShoppingListPage());
+        break;
+
+      case 15:
+        _onRoute(new FadePage());
         break;
     }
   }
