@@ -2,6 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_app/eighth/KeyStudy1.dart';
+import 'package:flutter_app/eighth/KeyStudy2.dart';
+import 'package:flutter_app/eighth/KeyStudy3.dart';
 import 'package:flutter_app/fifth/ColorViewPage.dart';
 import 'package:flutter_app/fifth/ListViewPage.dart';
 import 'package:flutter_app/fifth/StackPage.dart';
@@ -10,6 +13,13 @@ import 'package:flutter_app/fourth/CardPage.dart';
 import 'package:flutter_app/fourth/ExpandedPage.dart';
 import 'package:flutter_app/fourth/GridView.dart';
 import 'package:flutter_app/index/IndexPage.dart';
+import 'package:flutter_app/ninth/gesture/DismissibleItemPage.dart';
+import 'package:flutter_app/ninth/gesture/OnTapPage.dart';
+import 'package:flutter_app/ninth/image/CachedNetworkImagePage.dart';
+import 'package:flutter_app/ninth/image/FadeImagePage.dart';
+import 'package:flutter_app/ninth/image/GridListPage.dart';
+import 'package:flutter_app/ninth/image/ImagePage.dart';
+import 'package:flutter_app/ninth/list/DiffTypeListPage.dart';
 import 'package:flutter_app/second/SecondPage.dart';
 import 'package:flutter_app/seventh/FadePage.dart';
 import 'package:flutter_app/seventh/ShoppingList.dart';
@@ -39,6 +49,16 @@ class IndexState extends State<IndexPage>{
     '共同管理状态',
     '购物车',
     'Fade',
+    'Key学习-less',
+    'Key学习-ful 不添加key',
+    'Key学习-ful 添加key',
+    'ImagePage',
+    'FadeImagePage',
+    'CachedNetworkImagePage',
+    'DiffTypeListPage',
+    'GridListPage',
+    'OnTapPage',
+    'DismissibleItemPage',
   ];
 
   @override
@@ -120,6 +140,47 @@ class IndexState extends State<IndexPage>{
       case 15:
         _onRoute(new FadePage());
         break;
+
+      case 16:
+        _onRoute(new SwapColorPage());
+        break;
+
+      case 17:
+        _onRoute(new SwapColorPage2());
+        break;
+
+      case 18:
+        _onRoute(new SwapColorPage3());
+        break;
+
+      case 19:
+        _onRoute(new ImagePage());
+        break;
+
+      case 20:
+        _onRoute(new FadeImagePage());
+        break;
+
+      case 21:
+        _onRoute(new CachedNetworkImagePage());
+        break;
+
+      case 22:
+        _onRoute(new DiffTypeListPage());
+        break;
+
+      case 23:
+        _onRoute(new GridListPage());
+        break;
+
+      case 24:
+        _onRoute(new OnTapPage());
+        break;
+
+      case 25:
+        _onRoute(new DismissibleItemPage());
+        break;
+
     }
   }
 
