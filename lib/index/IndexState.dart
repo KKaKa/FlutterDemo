@@ -20,6 +20,9 @@ import 'package:flutter_app/ninth/image/FadeImagePage.dart';
 import 'package:flutter_app/ninth/image/GridListPage.dart';
 import 'package:flutter_app/ninth/image/ImagePage.dart';
 import 'package:flutter_app/ninth/list/DiffTypeListPage.dart';
+import 'package:flutter_app/ninth/network/HttpPackageDemo.dart';
+import 'package:flutter_app/ninth/network/WebSocketDemo.dart';
+import 'package:flutter_app/ninth/todo/Todo.dart';
 import 'package:flutter_app/second/SecondPage.dart';
 import 'package:flutter_app/seventh/FadePage.dart';
 import 'package:flutter_app/seventh/ShoppingList.dart';
@@ -59,6 +62,9 @@ class IndexState extends State<IndexPage>{
     'GridListPage',
     'OnTapPage',
     'DismissibleItemPage',
+    'Todo',
+    'HttpPackagePage',
+    'WebSocketPage'
   ];
 
   @override
@@ -179,6 +185,18 @@ class IndexState extends State<IndexPage>{
 
       case 25:
         _onRoute(new DismissibleItemPage());
+        break;
+
+      case 26:
+        _onRoute(new TodoScreen());
+        break;
+
+      case 27:
+        _onRoute(new HttpPackagePage());
+        break;
+
+      case 28:
+        _onRoute(new WebSocketPage());
         break;
 
     }
